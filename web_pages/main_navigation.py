@@ -8,3 +8,4 @@ class MainIndex(View):
 
         if request.method == 'GET':
             return render_template('Main_Index.html')
+
