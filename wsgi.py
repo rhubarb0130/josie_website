@@ -1,4 +1,4 @@
-"""Copyright (c) 2019 Accurate Technology and Test Automation LLC (ATTA) all rights reserved"""
+"""Copyright (c) 2020 Josephine Peacock all rights reserved"""
 
 from app import app
 

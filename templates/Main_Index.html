@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title>Meet Josie</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainstyle.css') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
     <link rel="shortcut icon" type="image/png" href="static/images/ATTA_Bulb.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -23,7 +22,7 @@
     with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the
     loop on focusing solely on the bottom line.</p>
 
-<div class="fade" style="width:50%;margin:auto;">
+<div class="fade">
     <img  style="width:100%;" src="static/images/download.jpg" alt="Pretty Landscape">
 </div>
 
@@ -33,9 +32,14 @@ Bring to the table win-win survival strategies to ensure proactive domination. A
 <br>
 Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
- <div class="fade" style="width:50%; margin:auto;">
+ <div class="fade">
     <img  style="width:100%;" src="static/images/download.jpg" alt="Pretty Landscape">
 </div>
+<hr>
+<p>Some extra stuff down here because we can</p>
+<button id="download_cv" onClick="window.open('{{cv_download}}', 'popup', 'width=800,height=800'); return false;">
+CV/Resume
+</button>
 
 </body>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>

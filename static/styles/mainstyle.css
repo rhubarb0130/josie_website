@@ -5,9 +5,25 @@
 p{
  margin:auto;
  width:75%;
- text-align:center;
+ text-align:left;
+ padding: 25px;
 }
+
 .fade {
-  margin: 50px;
   padding: 50px;
+  width:50%;
+  margin:auto;
+}
+
+/* Change CSS based on screen size*/
+@media (max-width: 1000px) {
+    *{
+        font-family: "Comic Sans MS";
+    }
+    p{
+        width:100%;
+    }
+    .fade{
+        width:100%;
+    }
 }

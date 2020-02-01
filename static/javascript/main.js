@@ -1,4 +1,4 @@
-console.log('working');
+//Copyright (c) 2020 Josephine Peacock all rights reserved
 
 $(window).on("load",function() {
   $(window).scroll(function() {
@@ -16,3 +16,4 @@ $(window).on("load",function() {
     });
   }).scroll(); //invoke scroll-handler on page-load
 });
+
