@@ -3,6 +3,7 @@
 from flask import request, send_file
 from flask.views import View
 
+
 class CvDownload(View):
     methods = ['GET']
 
