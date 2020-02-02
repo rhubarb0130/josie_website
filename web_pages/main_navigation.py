@@ -20,7 +20,8 @@ class MainIndex(View):
                                    success_stories=_routes['success_stories'],
                                    atta_connect=_routes['atta_connect'],
                                    servo_valve=_routes['servo_valve'],
-                                   modular_control=_routes['modular_control']
+                                   modular_control=_routes['modular_control'],
+                                   contact=_routes['contact']
                                    )
 
 
@@ -56,3 +57,14 @@ class ModularControl(View):
     def dispatch_request(self):
         if request.method == 'GET':
             return render_template('modular_control.html', main='/')
+
+
+class ContactForm(View):
+    methods = ['GET', 'POST']
+
+    def dispatch_request(self):
+        if request.method == 'GET':
+            return render_template('contact.html', main='/')
+
+        if request.method == 'POST':
+            pass

@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainstyle.css') }}">
     <link rel="shortcut icon" type="image/png" href="static/images/ATTA_Bulb.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-a11y="true"></script>
 </head>
 <body>
 
@@ -32,9 +33,9 @@
 </div>
 
 <div class="fade-scroll">
-    <p>I like to say that I'm a Jack (Jill) of all trades and master of a few. From when we were kids and I was the
-    neighborhood bicycle mechanic up to where I'm traveling to some far off country by myself to install automated
-        industrial machines.</p>
+    <p>I like to say that I'm a Jack (Jill) of all trades and master of a few. From when I was the
+    neighborhood bicycle mechanic as a kid, to traveling to some far off country by myself for automated
+        industrial machines as an adult, to starting a business providing automated testing solutions.</p>
     <p>I've made a name for myself as a technical problem solver, troubleshooter, and innovator. Currently I'm looking
         to expand my skill set further into the world of software and web development.</p>
     <p>Below are some of my proudest achievements.</p>
@@ -77,20 +78,15 @@
 </div>
 <hr>
 <p>Footer stuff will go here</p>
-<!--<div class="hamburger_container">-->
-
-<!--</div>-->
-<!--<button id="download_cv" onClick="window.open('{{cv_download}}', 'popup', 'width=800,height=800'); return false;">-->
-<!--CV/Resume-->
-<!--</button>-->
 
 <!--Sidepanel-->
 <div id="mySidepanel" class="sidepanel">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-  <a href="#">About</a>
-<!--  <a href="#">Services</a>-->
-  <a href="#">Contact</a>
-  <a href="javascript:window.open('{{cv_download}}', 'popup', 'width=800,height=800');">Curriculum Vitae</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+    <a href="{{contact}}">Contact</a>
+    <a href="https://www.linkedin.com/in/josiebpeacock" target="blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+    <a href="https://github.com/rhubarb0130" target="blank"><i class="fab fa-github-square"></i> GitHub</a>
+    <a href="javascript:window.open('{{cv_download}}', 'popup', 'width=800,height=800');"><i class="far fa-file-pdf"></i> Curriculum Vitae </a>
+    <a href="#"><i class="far fa-file-pdf"></i> R&egrave;sum&egrave; </a>
 </div>
 
 

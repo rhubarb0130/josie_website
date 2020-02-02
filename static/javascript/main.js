@@ -17,11 +17,17 @@ $(function() {
     });
 });
 
+
 //sidepanel functions
 function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
+    // get screen width to be responsive
+    var width = screen.width;
+    if (width < 1000){
+    document.getElementById("mySidepanel").style.width = "75%";
+    }else{
+    document.getElementById("mySidepanel").style.width = "350px";
+    }
 }
-
 function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
+    document.getElementById("mySidepanel").style.width = "0";
 }

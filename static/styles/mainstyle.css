@@ -74,12 +74,6 @@ button{
     width:100%;
 }
 
-.hamburger_container{
-    width:45px;
-    height:45px;
-    border: 1px solid black;
-    border-radius:3px;
-}
 .hamburger_stripe{
     width: 35px;
     height: 5px;
@@ -105,7 +99,7 @@ button{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: white;
   display: block;
   transition: 0.3s;
 }
@@ -121,18 +115,8 @@ button{
   font-size: 36px;
 }
 
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
 
-.openbtn:hover {
-  background-color:#444;
-}
+
 
 /* Change CSS based on screen size*/
 @media (max-width: 1000px) {
@@ -145,5 +129,14 @@ button{
     }
     .fade-scroll{
         width:100%;
+    }
+    .hamburger_stripe{
+        width: 65px;
+        height: 10px;
+        background-color: black;
+        margin: 16px 0;
+    }
+    .sidepanel a {
+        font-size:250%;
     }
 }

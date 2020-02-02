@@ -17,6 +17,7 @@ app.add_url_rule(_routes['main_index'], view_func=MainIndex.as_view('main_index'
 app.add_url_rule(_routes['atta_connect'], view_func=AttaConnect.as_view('atta_connect'))
 app.add_url_rule(_routes['servo_valve'], view_func=ServoValve.as_view('servo_valve'))
 app.add_url_rule(_routes['modular_control'], view_func=ModularControl.as_view('modular_control'))
+app.add_url_rule(_routes['contact'], view_func=ContactForm.as_view('contact_form'))
 app.add_url_rule(_routes['success_stories'], view_func=SucessStories.as_view('success_stories'))
 
 # downloads
