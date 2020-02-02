@@ -136,7 +136,17 @@ button{
         background-color: black;
         margin: 16px 0;
     }
+    .sidepanel  {
+        padding-top:120px;
+    }
     .sidepanel a {
         font-size:250%;
+        padding: 40px 40px 40px 32px;
+    }
+    .sidepanel .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 86px;
     }
 }
