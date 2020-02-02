@@ -127,6 +127,9 @@ button{
     h1, h2{
         font-size:250%;
     }
+    li{
+        font-size:250%;
+    }
     .fade-scroll{
         width:100%;
     }
