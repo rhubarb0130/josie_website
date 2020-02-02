@@ -10,6 +10,7 @@ p{
     margin:auto;
     width:100%;
     text-align:left;
+    font-size:25px;
 }
 
 button{
@@ -20,10 +21,21 @@ button{
     float:left;
 }
 
-.fade-scroll {
+.container {
+  position: relative;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+
+.fade-scroll{
     padding:0px;
     margin:50px;
-    width:50%;
+    width:75%;
     margin:auto;
 }
 
