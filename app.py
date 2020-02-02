@@ -3,7 +3,7 @@ import json
 
 from flask import Flask
 
-from web_pages.main_navigation import MainIndex, SucessStories
+from web_pages.main_navigation import *
 from web_pages.download_content import CvDownload
 
 route_file = open('routes.json', 'r')
@@ -14,6 +14,7 @@ app = Flask(__name__)
 
 # Main Navigation
 app.add_url_rule(_routes['main_index'], view_func=MainIndex.as_view('main_index'))
+app.add_url_rule(_routes['atta_connect'], view_func=AttaConnect.as_view('atta_connect'))
 app.add_url_rule(_routes['success_stories'], view_func=SucessStories.as_view('success_stories'))
 
 # downloads

@@ -3,7 +3,7 @@
 
 $(function() {
     var documentEl = $(document),
-        fadeElem = $('.fade-scroll, .container');
+        fadeElem = $('.fade-scroll, .container, .icon_panel');
 
     documentEl.on('scroll', function() {
         var currScrollPos = documentEl.scrollTop();
