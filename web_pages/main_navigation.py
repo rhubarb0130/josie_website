@@ -18,7 +18,9 @@ class MainIndex(View):
             return render_template('Main_Index.html',
                                    cv_download=_routes['josie_cv'],
                                    success_stories=_routes['success_stories'],
-                                   atta_connect=_routes['atta_connect']
+                                   atta_connect=_routes['atta_connect'],
+                                   servo_valve=_routes['servo_valve'],
+                                   modular_control=_routes['modular_control']
                                    )
 
 
@@ -37,4 +39,20 @@ class AttaConnect(View):
     def dispatch_request(self):
 
         if request.method == 'GET':
-            return 'ATTAconnect'
+            return render_template('atta_connect.html', main='/')
+
+
+class ServoValve(View):
+    methods = ['GET']
+
+    def dispatch_request(self):
+        if request.method == 'GET':
+            return render_template('servo_valve.html', main='/')
+
+
+class ModularControl(View):
+    methods = ['GET']
+
+    def dispatch_request(self):
+        if request.method == 'GET':
+            return render_template('modular_control.html', main='/')
