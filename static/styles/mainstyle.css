@@ -1,11 +1,14 @@
 *{
     font-family: Arial;
 }
+h1, h2{
+    text-align:center;
+}
 
 p{
     padding:15px;
     margin:auto;
-    width:60%;
+    width:100%;
     text-align:left;
 }
 
@@ -17,22 +20,19 @@ button{
     float:left;
 }
 
-.fade {
-    padding:50px;
-    margin:0px;
+.fade-scroll {
+    padding:0px;
+    margin:50px;
     width:50%;
     margin:auto;
 }
 
 /* Change CSS based on screen size*/
 @media (max-width: 1000px) {
-    *{
-        font-family: "Comic Sans MS";
-    }
     p{
         width:100%;
     }
-    .fade{
+    .fade-scroll{
         width:100%;
     }
 }
