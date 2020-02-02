@@ -34,7 +34,7 @@ button{
 
 .centered {
   position: absolute;
-  top: 25%;
+  top: 10%;
   left: 15%;
 }
 
@@ -52,6 +52,7 @@ button{
     height:250px;
     border: 2px solid black;
     border-radius: 25px;
+    background-color:white;
 }
 
 .icon_content{
