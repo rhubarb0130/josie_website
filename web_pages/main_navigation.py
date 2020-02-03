@@ -21,7 +21,9 @@ class MainIndex(View):
                                    atta_connect=_routes['atta_connect'],
                                    servo_valve=_routes['servo_valve'],
                                    modular_control=_routes['modular_control'],
-                                   contact=_routes['contact']
+                                   contact=_routes['contact'],
+                                   linkedin=_routes['linkedin'],
+                                   github=_routes['github']
                                    )
 
 

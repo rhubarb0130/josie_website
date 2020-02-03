@@ -11,8 +11,8 @@
 <body>
 
 
-<div style="width:100%;" class="container">
-    <img style="width:100%;" src="static/images/tulsa_skyline.jpg">
+<div style="width:100%;" class="fade_up">
+    <img style="width:100%;margin-bottom:25px;" src="static/images/tulsa_skyline.jpg">
 
     <a href="javascript:openNav()">
     <div class="top_right">
@@ -30,10 +30,8 @@
         <li>Renaissance Woman</li>
         </ul>
     </div>
-</div>
 
-<div class="fade-scroll">
-    <p>I like to say that I'm a Jack (Jill) of all trades and master of a few. From when I was the
+    <p>I like to say that I'm a Jill of all trades and master of a few. From when I was the
     neighborhood bicycle mechanic as a kid, to traveling to some far off country by myself for automated
         industrial machines as an adult, to starting a business providing automated testing solutions.</p>
     <p>I've made a name for myself as a technical problem solver, troubleshooter, and innovator. Currently I'm looking
@@ -42,41 +40,66 @@
 </div>
 <hr>
 
-<!--<div class="fade-scroll" style="border: 2px solid black;">-->
-<div class="fade-scroll">
-    <p>ATTAconnect has been a labor of love for the last two years. My experience with automated test system software
-        left me feeling we could do better when it came to software development and IIoT enabled data management.
-        So with internet resources and help from an experienced programmer we were able to create
-        something revolutionary in the world of automated test systems </p>
-    <a href="{{atta_connect}}">
+<!--<div class="fade_up" style="border: 2px solid black;overflow:hidden;">-->
+<div class="fade_up">
+     <a href="{{atta_connect}}">
         <div class="icon_panel">
             <img class="icon_content" src="static/images/ATTAconnect_tm.png" alt="ATTAconnect">
         </div>
     </a>
+    <p class="icon_wording">
+        ATTAconnect has been a labor of love for the last two years. My experience with automated test system software
+        left me feeling we could do better when it came to software development and IIoT enabled data management.
+        So with internet resources and help from an experienced programmer we were able to create
+        something revolutionary in the world of automated test systems
+    </p>
 </div>
 <hr>
-<div class="fade-scroll">
-    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
-        corporate strategy foster collaborative thinking to further the overall value proposition. Organically
-        grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+<div class="fade_up">
     <a href="{{servo_valve}}">
     <div class="icon_panel">
         <img class="icon_content" style="margin:0px 0px 0px 0px; padding-left:45px; width:75%;" src="static/images/servo_valve.png" alt="ATTAconnect">
     </div>
     </a>
-</div>
-<hr>
-<div class="fade-scroll">
-    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+
+    <p class="icon_wording">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
         corporate strategy foster collaborative thinking to further the overall value proposition. Organically
-        grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+        grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+    </p>
+</div>
+
+<hr>
+
+<div class="fade_up">
     <a href="{{modular_control}}">
     <div class="icon_panel">
         <img class="icon_content" style="margin-top:10px;" src="static/images/Modular_control_system_tm.png" alt="ATTAconnect">
     </div>
     </a>
+
+    <p class="icon_wording">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+        corporate strategy foster collaborative thinking to further the overall value proposition. Organically
+        grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+    </p>
 </div>
+
 <hr>
+
+<div class="fade_up">
+    <a href="{{modular_control}}">
+    <div class="icon_panel">
+<!--        <img class="icon_content" style="margin-top:10px;" src="static/images/Modular_control_system_tm.png" alt="ATTAconnect">-->
+    </div>
+    </a>
+
+    <p class="icon_wording">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+        corporate strategy foster collaborative thinking to further the overall value proposition. Organically
+        grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+    </p>
+</div>
+
+<hr>
+
 <div style="float:right;padding:25px;">
 <p style="font-size:15px;padding:0px;">Built using Flask Python micro framework</p>
 <p style="font-size:15px;padding:0px;">Copyright &#169 2020 Josephine Peacock all rights reserved</p>
@@ -86,8 +109,8 @@
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
     <a href="{{contact}}">Contact</a>
-    <a href="https://www.linkedin.com/in/josiebpeacock" target="blank"><i class="fab fa-linkedin"></i> Linkedin</a>
-    <a href="https://github.com/rhubarb0130" target="blank"><i class="fab fa-github-square"></i> GitHub</a>
+    <a href="{{linkedin}}" target="blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+    <a href="{{github}}" target="blank"><i class="fab fa-github-square"></i> GitHub</a>
     <a href="javascript:window.open('{{cv_download}}', 'popup', 'width=800,height=800');"><i class="far fa-file-pdf"></i> Curriculum Vitae </a>
     <a href="#"><i class="far fa-file-pdf"></i> R&egrave;sum&egrave; </a>
 </div>

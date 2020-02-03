@@ -9,8 +9,8 @@ h1, h2{
 p{
     padding:15px;
     margin:auto;
-    width:100%;
-    text-align:left;
+    width:85%;
+    text-align:center;
     font-size:25px;
 }
 
@@ -23,24 +23,14 @@ a:hover{
     opacity:0.5;
 }
 
-button{
-    padding:0px;
-    margin:15px;
-    height:25px;
-    width:150px;
-    float:left;
-}
 
-/* Main Picture at top css*/
-.container {
-    padding-bottom:50px;
-    position: relative;
-    color: white;
+.fade_up{
+    overflow:hidden;
 }
 
 .centered {
   position: absolute;
-  top: 10%;
+  top: 150px;
   left: 15%;
 }
 
@@ -50,18 +40,12 @@ button{
     right: 5%;
 }
 
-/* This is to format the first one we fade. Looking into changing this*/
-.fade-scroll{
-    padding:0px;
-    margin:50px;
-    width:75%;
-    margin:auto;
-}
 
 /* Big Icons to click on */
 .icon_panel{
+    float:left;
     padding:25px;
-    margin:25px auto 25px auto;
+    margin:25px 35px; 25px auto;
     width:500px;
     height:250px;
     border: 2px solid black;
@@ -72,6 +56,10 @@ button{
 .icon_content{
     margin-top:60px;
     width:100%;
+}
+
+.icon_wording{
+    margin-top:100px;
 }
 
 .hamburger_stripe{
@@ -122,16 +110,13 @@ button{
 @media (max-width: 1000px) {
     p{
         width:100%;
-        font-size:250%;
+        /*font-size:250%;*/
     }
     h1, h2{
         font-size:250%;
     }
     li{
         font-size:250%;
-    }
-    .fade-scroll{
-        width:100%;
     }
     .hamburger_stripe{
         width: 65px;
