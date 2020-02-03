@@ -1,2 +1,4 @@
 *.idea
 venv/
+
+web_pages/__pycache__/
