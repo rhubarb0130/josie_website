@@ -23,7 +23,9 @@ class MainIndex(View):
                                    modular_control=_routes['modular_control'],
                                    contact=_routes['contact'],
                                    linkedin=_routes['linkedin'],
-                                   github=_routes['github']
+                                   github=_routes['github'],
+                                   vsi=_routes['vsi'],
+                                   yt_valve_test=_routes['yt_valve_test']
                                    )
 
 
