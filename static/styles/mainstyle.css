@@ -2,7 +2,7 @@
     font-family: Arial;
 }
 
-h1, h2{
+h1, h2, h3{
     text-align:center;
 }
 
@@ -43,9 +43,9 @@ a:hover{
 
 /* Big Icons to click on */
 .icon_panel{
-    float:left;
     padding:25px;
-    margin:25px 35px; 25px auto;
+    /*margin:25px 35px; 25px auto;*/
+    margin:auto;
     width:500px;
     height:250px;
     border: 2px solid black;
@@ -59,7 +59,7 @@ a:hover{
 }
 
 .icon_wording{
-    margin-top:100px;
+    margin-top:60px;
 }
 
 .hamburger_stripe{
@@ -103,20 +103,20 @@ a:hover{
   font-size: 36px;
 }
 
-
-
-
 /* Change CSS based on screen size*/
 @media (max-width: 1000px) {
     p{
-        width:100%;
+        width:90%;
         /*font-size:250%;*/
     }
-    h1, h2{
-        font-size:250%;
+    h1, h2, h3{
+        font-size:150%;
     }
     li{
         font-size:250%;
+    }
+    .centered{
+        top:30px;
     }
     .hamburger_stripe{
         width: 65px;
