@@ -10,4 +10,12 @@ class CvDownload(View):
     def dispatch_request(self):
 
         if request.method == 'GET':
-            return send_file('static/downloads/Josie IT CV.pdf')
+            return send_file('static/downloads/Josie CV.pdf')
+
+
+class ResumeDownload(View):
+    methods = ['GET']
+
+    def dispatch_request(self):
+        if request.method == 'GET':
+            return send_file('static/downloads/JosiesResume.pdf')

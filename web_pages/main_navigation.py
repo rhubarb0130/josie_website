@@ -17,10 +17,12 @@ class MainIndex(View):
         if request.method == 'GET':
             return render_template('Main_Index.html',
                                    cv_download=_routes['josie_cv'],
+                                   resume_download=_routes['josie_resume'],
                                    success_stories=_routes['success_stories'],
                                    atta_connect=_routes['atta_connect'],
                                    servo_valve=_routes['servo_valve'],
                                    modular_control=_routes['modular_control'],
+                                   web_development=_routes['web_development'],
                                    contact=_routes['contact'],
                                    linkedin=_routes['linkedin'],
                                    github=_routes['github'],
@@ -61,6 +63,14 @@ class ModularControl(View):
     def dispatch_request(self):
         if request.method == 'GET':
             return render_template('modular_control.html', main='/')
+
+
+class WebDevelop(View):
+    methods = ['GET']
+
+    def dispatch_request(self):
+        if request.method == 'GET':
+            return render_template('web_development.html', main='/')
 
 
 class ContactForm(View):
