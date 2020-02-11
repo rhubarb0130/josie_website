@@ -2,3 +2,5 @@
 venv/
 
 web_pages/__pycache__/
+
+secret.json
