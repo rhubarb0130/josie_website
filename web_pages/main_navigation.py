@@ -1,7 +1,7 @@
 """Copyright (c) 2020 Josephine Peacock all rights reserved"""
 import json
 
-from flask import render_template, request
+from flask import render_template, request, make_response
 from flask.views import View
 
 route_file = open('routes.json', 'r')
@@ -15,7 +15,7 @@ class MainIndex(View):
     def dispatch_request(self):
 
         if request.method == 'GET':
-            return render_template('Main_Index.html',
+            resp = make_response(render_template('Main_Index.html',
                                    cv_download=_routes['josie_cv'],
                                    resume_download=_routes['josie_resume'],
                                    success_stories=_routes['success_stories'],
@@ -28,8 +28,11 @@ class MainIndex(View):
                                    github=_routes['github'],
                                    vsi=_routes['vsi'],
                                    yt_valve_test=_routes['yt_valve_test']
-                                   )
+                                   ))
 
+            resp.set_cookie("Set-Cookie", "HttpOnly;Secure;SameSite=Strict")  # remove Chrome cross site warning
+
+            return resp
 
 class SucessStories(View):
     methods = ['GET']
