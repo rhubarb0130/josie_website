@@ -10,10 +10,7 @@
 </head>
 <body>
 
-
-<div style="width:100%;" class="fade_up">
-    <img style="width:100%;margin-bottom:25px;" src="static/images/tulsa_skyline.jpg">
-
+<div class="nav_1">
     <a href="javascript:openNav()">
     <div class="top_right">
         <div class="hamburger_stripe"></div>
@@ -21,6 +18,12 @@
         <div class="hamburger_stripe"></div>
     </div>
     </a>
+
+</div>
+
+<div style="width:100%;" class="fade_up">
+<!--<div style="width:100%;opacity:0.75;">-->
+    <img style="width:100%;margin-bottom:25px;margin-top:50px;" src="static/images/tulsa_skyline.jpg">
 
     <div class="centered" style="color:white;">
         <h1 style="text-align:left;">Josephine Peacock</h1>
@@ -32,6 +35,7 @@
     </div>
 </div>
 <div class="fade_up">
+<!--<div>-->
     <p>I like to say that I'm a Jill of all trades and master of a few. From when I was the
     neighborhood bicycle mechanic as a kid, traveling to some far off country as the subject matter expert for my
         company's test systems, to starting a business providing automated testing solutions.</p>
@@ -39,9 +43,9 @@
         to expand my skill set further into the world of software and web development.</p>
     <p>Below are some of my proudest achievements.</p>
 </div>
+
 <hr>
 
-<!--<div class="fade_up" style="border: 2px solid black;overflow:hidden;">-->
 <div class="fade_up">
     <h1>ATTAconnect Web Application</h1>
 <!--     <a href="{{atta_connect}}">-->
@@ -59,6 +63,7 @@
 </div>
 <hr>
 <div class="fade_up">
+<!--<div>-->
     <h1>Servo Valve Control</h1>
 <!--    <a href="{{servo_valve}}">-->
     <a href="#">
@@ -106,14 +111,13 @@
 <hr>
 
 <div class="fade_up">
-    <h1>Website Design Using Flask</h1>
-    <a href="{{web_development}}">
-<!--    <a href="{{modular_control}}">-->
+<h1>Website Design Using Flask</h1>
+<!--<a href="{{web_development}}">-->
     <a href="#">
-    <div class="icon_panel">
-        <h1 class="icon_content" style="margin-top:110px;"> > THIS WEBSITE! < </h1>
-<!--        <img class="icon_content" style="margin-top:10px;" src="static/images/Modular_control_system_tm.png" alt="ATTAconnect">-->
-    </div>
+        <div class="icon_panel">
+            <h1 class="icon_content" style="margin-top:110px;"> > THIS WEBSITE! < </h1>
+            <!--        <img class="icon_content" style="margin-top:10px;" src="static/images/Modular_control_system_tm.png" alt="ATTAconnect">-->
+        </div>
     </a>
 
     <p class="icon_wording">
@@ -126,8 +130,7 @@
         for this little beauty.
     </p>
 </div>
-
-<hr>
+    <hr>
 
 <div style="float:right;padding:25px;width:450px;">
 <p style="font-size:15px;padding:0px;text-align:left;">Built using Flask Python micro framework</p>
@@ -144,7 +147,7 @@
     <a href="javascript:window.open('{{resume_download}}', 'popup', 'width=800,height=800');"><i class="far fa-file-pdf"></i> R&egrave;sum&egrave; </a>
 </div>
 
-
 </body>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+
 </html>

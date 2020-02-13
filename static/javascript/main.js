@@ -2,18 +2,20 @@
 
 
 $(function() {
-    var documentEl = $(document),
-        fadeElem = $('.fade_up');
+    var documentEl = $(document);
+    var fadeElem = $('.fade_up');
 
     documentEl.on('scroll', function() {
         var currScrollPos = documentEl.scrollTop();
-//        console.log(currScrollPos);
 
         fadeElem.each(function() {
-            var $this = $(this),
-                elemOffsetTop = $this.offset().top;
-            if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
+            var fade_obj = $(this);
+            var elemOffsetTop = fade_obj.offset().top;
+
+            if (currScrollPos > elemOffsetTop) fade_obj.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
         });
+
+
     });
 });
 
@@ -28,6 +30,7 @@ function openNav() {
     document.getElementById("mySidepanel").style.width = "350px";
     }
 }
+
 function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }
