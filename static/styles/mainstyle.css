@@ -115,6 +115,34 @@ a:hover{
   font-size: 36px;
 }
 
+/*Info form styling*/
+.info_form{
+    width:50%;
+    height: 500px;
+    margin-left:auto;
+    margin-right:auto;
+    border-style:solid;
+    border-radius:5px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.info_form input{
+    float:left;
+    width:250px;
+}
+
+.info_form label{
+    float:left;
+    clear:left;
+    width:150px;
+
+}
+
+.info_form textarea{
+    float:left;
+    width:250px;
+}
 /* Change CSS based on screen size*/
 @media (max-width: 1000px) {
     p{

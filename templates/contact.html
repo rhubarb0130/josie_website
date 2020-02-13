@@ -1,17 +1,38 @@
 <!DOCTYPE html>
+
+{% from "_render_field.html" import render_field %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainstyle.css') }}">
-     <link rel="shortcut icon" type="image/png" href="static/images/ATTA_Bulb.png">
+    <link rel="shortcut icon" type="image/png" href="static/images/ATTA_Bulb.png">
 </head>
 <body>
 <a href="{{main}}">Back To Main
 <h1>Contact Form</h1>
 
-<img style="width:50%; margin-left:25%;" src="static/images/under-construction.png">
 </a>
+<hr>
+<div class="info_form">
+<form id="my_form" method="POST" action="{{ url_for('contact_form') }}">
+    {{ form.csrf_token }}
+
+    {{ render_field(form.firstname) }}
+    {{ render_field(form.lastname) }}
+
+    {{ render_field(form.email) }}
+
+    {{ render_field(form.message) }}
+
+    {{ form.submit }}
+
+     {{ form.recaptcha }}
+
+</form>
+</div>
+
 <hr>
 
 <div style="float:right;padding:25px;width:450px;">

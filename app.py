@@ -1,16 +1,38 @@
 """Copyright (c) 2020 Josephine Peacock all rights reserved"""
-import json
-
 from flask import Flask
 
-from web_pages.main_navigation import *
-from web_pages.download_content import *
+import json
+
+from web_pages.main_navigation import MainIndex, AttaConnect, ServoValve, ModularControl, WebDevelop, SucessStories,\
+    ContactForm
+from web_pages.download_content import CvDownload, ResumeDownload
+
+from db_models.flask_data import *
 
 route_file = open('routes.json', 'r')
 _routes = json.loads(route_file.read())
 route_file.close()
 
+secret_file = open('secret.json', 'r')
+_secret = json.loads(secret_file.read())
+secret_file.close()
+
 app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = _secret['sql_connection_string']
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = _secret['app_secret_key']
+app.config['RECAPTCHA_PUBLIC_KEY'] = _secret['recaptcha_public']
+app.config['RECAPTCHA_PRIVATE_KEY'] = _secret['recaptcha_private']
+app.config['TESTING'] = True  # Set this to True so recaptcha doesn't annoy us
+
+db.init_app(app)
+
+
+@app.before_first_request
+def create_tables():
+    db.create_all()
+
 
 # Main Navigation
 app.add_url_rule(_routes['main_index'], view_func=MainIndex.as_view('main_index'))
@@ -26,4 +48,5 @@ app.add_url_rule(_routes['josie_cv'], view_func=CvDownload.as_view('cv_download'
 app.add_url_rule(_routes['josie_resume'], view_func=ResumeDownload.as_view('resume_download'))
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+
+    app.run(port=5000, debug=True)
