@@ -111,11 +111,14 @@ class ContactForm(View):
                     db.session.flush()
 
                 else:
+                    # need to send them to a page that asks if they'd like to send a new comment. Pass the id so we
+                    # can enter it in the database
                     return 'Got that email already'
 
             except Exception as e:
                 return 'fail'
 
+            # need a thank you webpage and redirect
             return 'success'
 
         return render_template('contact.html', form=form, main='/')

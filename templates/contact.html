@@ -7,28 +7,41 @@
     <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainstyle.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-a11y="true"></script>
     <link rel="shortcut icon" type="image/png" href="static/images/ATTA_Bulb.png">
 </head>
 <body>
-<a href="{{main}}">Back To Main
-<h1>Contact Form</h1>
-
-</a>
-<hr>
+<!--<a href="{{main}}">Back To Main</a>-->
+<div class="nav_1">
+    <a href="javascript:openNav()">
+    <div class="top_right">
+        <div class="hamburger_stripe"></div>
+        <div class="hamburger_stripe"></div>
+        <div class="hamburger_stripe"></div>
+    </div>
+    </a>
+</div>
 <div class="info_form">
+    <h1>Introduce Yourself</h1>
 <form id="my_form" method="POST" action="{{ url_for('contact_form') }}">
     {{ form.csrf_token }}
-
+    <div style="overflow:hidden;width:75%;margin-left:auto;margin-right:auto;margin-top:35px;">
     {{ render_field(form.firstname) }}
     {{ render_field(form.lastname) }}
 
     {{ render_field(form.email) }}
 
-    {{ render_field(form.message) }}
+<!--    {{ render_field(form.message) }}-->
+    {{ form.message.label }}
+    {{ form.message (rows='5', cols='100') }}
+    </div>
 
     {{ form.submit }}
 
-     {{ form.recaptcha }}
+    <div style="height:250px;">
+    {{ form.recaptcha }}
+    </div>
 
 </form>
 </div>
@@ -40,5 +53,17 @@
 <p style="font-size:15px;padding:0px;text-align:left;">Copyright &#169 2020 Josephine Peacock all rights reserved</p>
 </div>
 
+<!--Sidepanel-->
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+    <a href="{{main}}">Main</a>
+    <a href="{{linkedin}}" target="blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+    <a href="{{github}}" target="blank"><i class="fab fa-github-square"></i> GitHub</a>
+    <a href="javascript:window.open('{{cv_download}}', 'popup', 'width=800,height=800');"><i class="far fa-file-pdf"></i> Curriculum Vitae </a>
+    <a href="javascript:window.open('{{resume_download}}', 'popup', 'width=800,height=800');"><i class="far fa-file-pdf"></i> R&egrave;sum&egrave; </a>
+</div>
+
+
 </body>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>
 </html>
