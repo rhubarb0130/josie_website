@@ -35,8 +35,7 @@ function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }
 
-function submit_info_form(){
-    var thing = document.getElementById("my_form");
-    console.log(thing);
-    thing.submit();
+function submit_info(){
+    alert('Thank You!');
+    document.getElementById("my_form").submit();
 }

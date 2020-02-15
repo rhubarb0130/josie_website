@@ -1,7 +1,7 @@
 """Copyright (c) 2020 Josephine Peacock all rights reserved"""
 import json
 
-from flask import render_template, request, make_response
+from flask import render_template, request, make_response, redirect
 from flask.views import View
 
 from web_pages.web_forms import LoginForm
@@ -119,7 +119,8 @@ class ContactForm(View):
                 return 'fail'
 
             # need a thank you webpage and redirect
-            return 'success'
+            resp = make_response(redirect(_routes['main_index'], code=302))
+            return resp
 
         return render_template('contact.html', form=form, main='/')
 

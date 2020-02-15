@@ -10,8 +10,8 @@ class LoginForm(FlaskForm):
     firstname = StringField('First Name', validators=[InputRequired(), Length(max=50)])
     lastname = StringField('Last Name', validators=[InputRequired(), Length(max=50)])
     email = StringField('Email', validators=[Email(), InputRequired(), Length(max=100)])
-    message = TextAreaField('Message', validators=[Length(max=500)])
-    submit = SubmitField('Submit')
+    message = TextAreaField('Message <br> (500 Max)', validators=[Length(max=500)])
+    # submit = SubmitField('Submit')
     recaptcha = RecaptchaField()
 
 

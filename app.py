@@ -19,11 +19,17 @@ secret_file.close()
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = _secret['sql_connection_string']
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = _secret['app_secret_key']
-app.config['RECAPTCHA_PUBLIC_KEY'] = _secret['recaptcha_public']
-app.config['RECAPTCHA_PRIVATE_KEY'] = _secret['recaptcha_private']
+
+class ConfigClass(object):
+    SQLALCHEMY_DATABASE_URI = _secret['sql_connection_string']
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SECRET_KEY = _secret['app_secret_key']
+    RECAPTCHA_PUBLIC_KEY = _secret['recaptcha_public']
+    RECAPTCHA_PRIVATE_KEY = _secret['recaptcha_private']
+
+
+app.config.from_object(__name__ + '.ConfigClass')
+
 app.config['TESTING'] = True  # Set this to True so recaptcha doesn't annoy us
 
 db.init_app(app)
@@ -46,6 +52,7 @@ app.add_url_rule(_routes['success_stories'], view_func=SucessStories.as_view('su
 # downloads
 app.add_url_rule(_routes['josie_cv'], view_func=CvDownload.as_view('cv_download'))
 app.add_url_rule(_routes['josie_resume'], view_func=ResumeDownload.as_view('resume_download'))
+
 
 if __name__ == "__main__":
 
